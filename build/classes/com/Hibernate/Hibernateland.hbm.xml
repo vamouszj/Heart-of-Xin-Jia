@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.bean">
+	<!-- 登陆表 -->
+	<class name="com.bean.LangBean" table="lands">
+		<id name="id" column="user_id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="account" column="user_name"></property>
+		<property name="passwd" column="user_passwd"></property>
+	</class>
+	<!-- 注册表 -->
+	<class name="com.bean.RegisterBean" table="registers">
+		<id name="R_id" column="register_id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="user_name" column="user_name"></property>
+		<property name="user_passwd" column="user_passwd"></property>
+		<property name="register_phone_num" column="register_phone_num"></property>
+		<property name="register_mailbox" column="register_mailbox"></property>
+	</class>
+	<!-- 文章表 -->
+	<class name="com.bean.ArticleBeam" table="article">
+		<id name="article_id" column="article_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="article_tite" column="article_tite"></property>
+		<property name="article_title" column="article_title"></property>
+		<property name="article_up_time" column="article_up_time"></property>
+		<property name="article_read_time" column="article_read_time"></property>
+		<property name="image" column="image"></property>
+	</class>
+	<!-- 音乐表 -->
+	<class name="com.bean.MusicInfo" table="music">
+		<id name="id" column="music_id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="music_name" column="music_name"></property>
+		<property name="music_song" column="music_song"></property>
+		<property name="music_type" column="music_type"></property>
+		<property name="music_route" column="music_route"></property>
+		
+	</class>
+	<!-- 测试类型 -->
+	<class name="com.bean.TextBean" table="test">
+		<id name="test_id" column="test_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="test_title" column="test_title"></property>
+		<property name="test_abstract" column="test_abstract"></property>
+		<property name="test_pop_sum" column="test_pop_sum"></property>
+	</class>
+	<!-- 测试题 -->
+	<class name="com.bean.SubjectBean" table="subject">
+		<id name="subject_id" column="subject_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="problem" column="problem"></property>
+		<property name="test_id" column="test_id"></property>
+		<!-- <many-to-one name="test_id" class="com.bean.TextBean" column="test_id" not-null="true"></many-to-one>-->
+		
+	</class>
+	<!-- 测试题答案 -->
+	<class name="com.bean.PowerBean" table="power">
+		<id name="power_id" column="power_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="select_A" column="select_A"></property>
+		<property name="select_B" column="select_B"></property>
+		<property name="select_C" column="select_C"></property>
+		<property name="select_D" column="select_D"></property>
+		<property name="weight_A" column="weight_A"></property>
+		<property name="weight_B" column="weight_B"></property>
+		<property name="weight_C" column="weight_C"></property>
+		<property name="weight_D" column="weight_D"></property>
+		<property name="problem_id" column="problem_id"></property>
+		<property name="test_id" column="test_id"></property>
+		<!--  <many-to-one name="problem_id" class="com.bean.SubjectBean" column="problem_id" cascade="save-update" not-null="true"></many-to-one> -->
+	</class>
+	<!-- 测试结果 -->
+	<class name="com.bean.ResultsBean" table="results">
+		<id name="result_id" column="result_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="test_id" column="test_id"></property>
+		<property name="result" column="result"></property>
+		<property name="user_name" column="user_name"></property>
+		<property name="test_sum_Weight" column="test_sum_Weight"></property>
+	</class>
+	<!--  test_answer_results根据test_id和权值大小查找对应的结果 -->
+	<class name="com.bean.Text_answer_results" table="test_answer_results">
+		<id name="test_answer_results_id" column="test_answer_results_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="test_id" column="test_id"></property>
+		<property name="test_sum_Weight" column="test_sum_Weight"></property>
+		<property name="test_result" column="test_result"></property>
+	
+	</class>
+	<!-- 交互表pour -->
+	<class name="com.bean.PourBean" table="pour">
+		<id name="pour_id" column="pour_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="user_name" column="user_name"></property>
+		<property name="pour_out_time" column="pour_out_time"></property>
+		<property name="pour_out_title" column="pour_out_title"></property>
+		
+	</class>
+</hibernate-mapping>

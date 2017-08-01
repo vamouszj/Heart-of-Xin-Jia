@@ -1,0 +1,149 @@
+.novel{
+	background: #fff;
+    padding: 0 30px 20px;
+}
+/* 文章头 */
+.novel_header{
+	border-bottom: 1px solid #eee;
+	padding: 10px 20px;
+}
+.curr{
+	height: 50px;
+	line-height: 50px;
+}
+.curr a{
+	display: inline-block;
+}
+.curr a:hover{
+	text-decoration: underline;
+	color: #3169b0;
+}
+a{
+	outline: 0;
+	color: #444;
+	text-decoration: none;
+}
+.selected{
+	color: #3169b0;
+}
+.title h1{
+	font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    line-height: 30px;
+}
+.zan{
+	color: #c3c2c2;
+	padding: 20px 0;
+}
+.thumb_h{
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+	margin-bottom: -2px;
+    background: url("../images/art_page/thumb.png") center center no-repeat;
+}
+.eye_h{
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+	margin-bottom: -2px;
+    background: url("../images/art_page/eye.png") center center no-repeat;
+}
+.span_h{	
+	margin-right: 10px;
+}
+.deliver{
+	margin-left: 10%;
+}
+
+/* 文章体 */
+.novel_body{
+	padding: 35px 30px;
+	font-size: 14px;
+    line-height: 28px;
+    font-family: 新宋体, 宋体;
+    padding: 35px 20px 0px;
+    overflow: hidden;
+}
+.img_txt{
+	margin-bottom: 45px;
+}
+.p_txt{
+	margin-bottom: 25px;
+}
+.foot_txt{
+	text-align: center;
+}
+@media screen and (min-width: 1400px){
+	.left_line{
+		display: inline-block;
+		width: 360px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 8px;
+	}
+	.line_text{
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		font-size: 32px;
+		font-weight: 600;
+		color: #fbb62d;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	.right_line{
+		display: inline-block;
+		width: 360px;
+		border-bottom: 1px solid #eee;	
+		margin-bottom: 8px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width:1400px){
+	.left_line{
+		display: inline-block;
+		width: 242px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 8px;
+	}
+	.line_text{
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		font-size: 26px;
+		font-weight: 800;
+		color: #fbb62d;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	.right_line{
+		display: inline-block;
+		width: 242px;
+		border-bottom: 1px solid #eee;	
+		margin-bottom: 8px;
+	}
+}
+@media screen and (max-width: 766px){
+	.left_line{
+		display: inline-block;
+		width: 54px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 4px;
+	}
+	.line_text{
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		font-weight: 600;
+		color: #fbb62d;
+		text-align: center;
+		letter-spacing: 2px;
+	}
+	.right_line{
+		display: inline-block;
+		width: 54px;
+		border-bottom: 1px solid #eee;	
+		margin-bottom: 4px;
+	}
+}
